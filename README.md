@@ -22,7 +22,9 @@ You will need Python 3 and the following libraries. You can install them using p
 
 ```bash
 pip install torch scipy numpy tqdm neurokit2 scikit-learn matplotlib plotly keras ecg_plot wfdb pandas opencv-python
-Datasets
+```
+
+### Datasets
 
 The ECG datasets for Normal Sinus Rhythm and Ischemia were obtained from Kaggle:
 
@@ -30,23 +32,25 @@ Ischemia Dataset: https://www.kaggle.com/datasets/bjoernjostein/ischemia-dataset
 Normal Sinus Rhythm Dataset: https://www.kaggle.com/datasets/bjoernjostein/normalsinusdataset
 You can use kagglehub to download the datasets as shown in the code.
 
-Usage
+### Usage
 The main script ischemia_classification.py handles the entire workflow, including data loading, preprocessing, model training, and evaluation.
 
 To run the script, execute the following command in your terminal:
 
-Bash
+```bash
 python ischemia_classification.py
+```
 The script will:
+* Download and preprocess the ECG data.
+* Build and train the FCN model.
+* Evaluate the model's performance and display the results.
+* Save the trained model as Ischemia_Classification.pth.
 
-Download and preprocess the ECG data.
-Build and train the FCN model.
-Evaluate the model's performance and display the results.
-Save the trained model as Ischemia_Classification.pth.
-Ethical Considerations and Limitations
-Clinical Decision Support: This model is intended to assist clinicians and should not be used as a replacement for professional medical advice. Clinical decisions should always be made by qualified medical professionals.
-Data Privacy and Security: All patient data should be handled with strict confidentiality and in compliance with privacy regulations.
-Dataset Limitations: The dataset used in this project may not be fully representative of the general population, which could limit the model's generalizability.
-Acknowledgments
+## Ethical Considerations and Limitations
+* **Clinical Decision Support:** This model is intended to assist clinicians and should not be used as a replacement for professional medical advice. Clinical decisions should always be made by qualified medical professionals.
+* **Data Privacy and Security:** All patient data should be handled with strict confidentiality and in compliance with privacy regulations.
+* **Dataset Limitations:** The dataset used in this project may not be fully representative of the general population, which could limit the model's generalizability.
+
+## Acknowledgments
 This project is based on and adapted from the "Median Heartbeat Classification - Ischemia" Kaggle notebook by Bjoern Jostein.
 
